@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+<h1 class="text-center mt-4">This is my all foods!</h1>
+<div class="container m-auto row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3  row-cols-xl-4 g-4 mt-3 mb-5">
+    {% for meal in meals %}
+    <div class="col">
+        <div class="card h-100">
+          <img src="{{meal.strMealThumb}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{meal.strMeal}}</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla beatae inventore delectus nihil est itaque, quidem quod dolorem dolores ratione obcaecati qui nemo non dignissimos consectetur repudiandae velit pariatur quisquam.</p>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+    
+  </div>
+{% endblock content %}
